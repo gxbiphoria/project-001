@@ -7,26 +7,27 @@ A simple bookshelf webpage built to help me read something every day while learn
 ## Overview
 This project started as a learning exercise and grew into a small personal reading tracker. It includes:
 
-- a clean bookshelf layout
+- a clean bookshelf layout with reading categories
 - a dark/light mode toggle
 - theme preference saved in `localStorage`
 - a simple, mobile-friendly design
 - accessible improvements for screen-reader support
 
 ## Features
-- Book list displayed in a readable card layout
+- Book list displayed in three reading categories: **To read**, **Reading**, and **Completed**
 - Theme toggle with a custom slider-style control
 - Saved theme preference between page refreshes
 - Responsive styling for smaller screens
 - Improved accessibility with `aria-label` and `aria-pressed`
 
 ## Project Files
-- `index.html` — page structure and content
+- `index.html` — page structure and reading categories
 - `style.css` — visual design, layout, and dark mode styling
 - `script.js` — theme toggle logic and browser storage
 
 ## Recent Updates
 - Added page language and viewport metadata for better browser compatibility
+- Updated the reading list to use status categories: To read / Reading / Completed
 - Improved accessibility on the dark mode toggle button
 - Added safe handling for `localStorage` access errors
 - Fixed the live site link in the README
@@ -54,6 +55,7 @@ This project started as a learning exercise and grew into a small personal readi
   - Built a dark/light mode button in `script.js`
   - Made the theme remember the user's choice after refresh
   - Improved accessibility and robustness in the web page
+  - Updated the reading list to show categories instead of just generic book entries
 - **What I learned:**
   - HTML defines structure, CSS defines style, and JavaScript defines behavior
   - `localStorage` keeps small bits of data in the browser
@@ -62,7 +64,7 @@ This project started as a learning exercise and grew into a small personal readi
   - `<!DOCTYPE html>` and how browsers interpret it
   - Why code looked correct but still didn't work at first
   - How `const`, `getElementById`, and `addEventListener` fit together
-- **Next:** Add a "Mark as read" button for each book.
+- **Next:** Add a "Mark as read" button for each book and save progress in the browser.
 
 ## Learning Notes
 ### HTML, CSS, and JavaScript
