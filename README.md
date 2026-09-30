@@ -1,13 +1,35 @@
 # project-001
 
-The first spontaneous project, started Wed 30 Sept, 8:40PM.
-
-A bookshelf webpage that helps me read something every day, built while learning to code from zero.
+A simple bookshelf webpage built to help me read something every day while learning HTML, CSS, and JavaScript from scratch.
 
 **Live site:** [https://gxbiphoria.github.io/project-001/](https://gxbiphoria.github.io/project-001/)
 
-## Goal
-Read something every day, and learn HTML, CSS and JavaScript by building this project.
+## Overview
+This project started as a learning exercise and grew into a small personal reading tracker. It includes:
+
+- a clean bookshelf layout
+- a dark/light mode toggle
+- theme preference saved in `localStorage`
+- a simple, mobile-friendly design
+- accessible improvements for screen-reader support
+
+## Features
+- Book list displayed in a readable card layout
+- Theme toggle with a custom slider-style control
+- Saved theme preference between page refreshes
+- Responsive styling for smaller screens
+- Improved accessibility with `aria-label` and `aria-pressed`
+
+## Project Files
+- `index.html` — page structure and content
+- `style.css` — visual design, layout, and dark mode styling
+- `script.js` — theme toggle logic and browser storage
+
+## Recent Updates
+- Added page language and viewport metadata for better browser compatibility
+- Improved accessibility on the dark mode toggle button
+- Added safe handling for `localStorage` access errors
+- Fixed the live site link in the README
 
 ## Roadmap
 - [x] Create the repo
@@ -22,11 +44,6 @@ Read something every day, and learn HTML, CSS and JavaScript by building this pr
 - [ ] Add a streak tracker
 - [ ] (Later) Custom domain
 
-## Project Files
-- `index.html`: the structure of the page
-- `style.css`: the colors, fonts and layout, including the dark theme
-- `script.js`: the behavior (dark mode button and saving my choice)
-
 ## Progress Log
 
 ### Wed 30 Sept
@@ -35,63 +52,38 @@ Read something every day, and learn HTML, CSS and JavaScript by building this pr
   - Published the page with GitHub Pages
   - Wrote `index.html` and styled it with `style.css`
   - Built a dark/light mode button in `script.js`
-  - Made dark mode remember my choice after refreshing, using `localStorage`
-  - Debugged why it wasn't saving at first
-- **What I learned:** see "Things I've Learned" below
+  - Made the theme remember the user's choice after refresh
+  - Improved accessibility and robustness in the web page
+- **What I learned:**
+  - HTML defines structure, CSS defines style, and JavaScript defines behavior
+  - `localStorage` keeps small bits of data in the browser
+  - DevTools helps find and debug issues faster
 - **What confused me:**
-  - What the `!` in `<!DOCTYPE html>` does
-  - Why code that looked right didn't work at first
-  - What the Console is for
-  - `const`, `getElementById` and `addEventListener` (too much for day one, will revisit)
+  - `<!DOCTYPE html>` and how browsers interpret it
+  - Why code looked correct but still didn't work at first
+  - How `const`, `getElementById`, and `addEventListener` fit together
 - **Next:** Add a "Mark as read" button for each book.
 
-## Things I've Learned
-
-### GitHub
-- A repository (repo) is a project folder on GitHub.
-- A commit saves a change, and every version is kept so I can undo things.
-- GitHub Pages turns a repo into a live website. Updates take 1-2 minutes.
-- README.md is the front page of the repo, written in Markdown.
-
-### HTML, CSS and JavaScript
-- HTML is the structure, CSS is the style, JavaScript is the behavior.
+## Learning Notes
+### HTML, CSS, and JavaScript
+- HTML is the structure, CSS is the style, and JavaScript is the behavior.
 - `<link>` connects the CSS file and `<script>` connects the JavaScript file.
-- `<script>` goes at the bottom of `<body>` so the button exists before the code runs.
-- The button's `id` (`theme-toggle`) is how JavaScript finds it.
-- `<!DOCTYPE html>` goes on line 1 and tells the browser this is modern HTML. Without it, browsers can use "quirks mode" and act like old browsers.
-- The `!` marks a declaration (an instruction to the browser), not a normal tag. Comments use it too.
-- Comments: `<!-- note -->` in HTML and `// note` in JavaScript. The browser ignores them.
-- CSS variables (like `--bg`) let me change a whole theme in one place.
-- `classList.toggle("dark")` adds the class if it's missing and removes it if it's there.
-- `localStorage` keeps small pieces of text in the browser after a refresh. It's saved per browser and per device.
+- `classList.toggle("dark")` adds or removes a theme class.
+- `localStorage` stores small pieces of text between visits.
 
 ### Debugging
-- The code was correct but didn't work at first. I found out why by testing one thing at a time.
-- Cmd + Option + J opens the Console in Chrome DevTools. It's a scratchpad for testing, and it doesn't change my real files.
-- `console.log("...")` shows whether my code is running.
-- Not every red error is my bug. The `favicon.ico` 404 just means the site has no tab icon.
-- Hard refresh (Cmd + Shift + R) loads the newest version of the page.
-
-### How to learn
-- Copying code is fine if I then change it, break it on purpose, and explain it in my own words.
-- Writing the plan as comments first makes a big job feel smaller.
+- Use the browser console to test code and inspect errors.
+- Hard refresh (`Cmd + Shift + R`) reloads the newest version of the page.
+- Not every red error is caused by your code.
 
 ## Glossary
 - **Repo:** a project folder on GitHub
 - **Commit:** a saved change
-- **DOCTYPE:** first line of an HTML file, tells the browser it's modern HTML
-- **Comment:** a note the browser ignores
-- **CSS variable:** a named value like `--bg` that I can reuse and change in one place
-- **localStorage:** browser storage that keeps small pieces of text between visits
-- **Console:** a DevTools panel for running test code and reading messages
-- **console.log:** prints a message to the Console
-- **Hard refresh:** Cmd + Shift + R, reloads the page ignoring saved copies
+- **DOCTYPE:** the first line of an HTML file that tells the browser to use modern HTML parsing
+- **Console:** a browser panel for testing code and viewing errors
+- **localStorage:** browser storage that keeps small pieces of saved data
 
-## Stuck Points / Questions
-- Understand `const`, `getElementById` and `addEventListener` properly.
-- How do I find and fix bugs faster?
-
-## Log Template (copy for each new session)
+## Log Template
 ### DAY DATE
 - **What I did:**
 - **What I learned:**
