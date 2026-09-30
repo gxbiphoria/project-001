@@ -19,7 +19,7 @@ A bookshelf webpage that helps me read something every day, built while learning
 
 ### Wed 30 Sept
 - **What I did:** Started the project and set up the repo. Added a dark/light mode button, linked 'style.css' and 'script.js' to 'index.html', and tried adding a HTML comment.
-  - **Next:****- `<!DOCTYPE html>` goes on line 1 and tells the browser the file is modern HTML. Without it, browsers can switch to "quirks mode" and act like old browsers.
+  - `<!DOCTYPE html>` goes on line 1 and tells the browser the file is modern HTML. Without it, browsers can switch to "quirks mode" and act like old browsers.
   - The `!` marks a declaration (an instruction to the browser), not a normal tag that shows on the page. Comments use it too.
   - Comments look like `<!-- note -->`. The browser hides them, but I can still see them with View page source.
   - Copying code is fine, but I only learn by changing it, breaking it on purpose, and explaining it in my own words.
