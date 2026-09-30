@@ -25,3 +25,8 @@ A bookshelf webpage that helps me read something every day, built while learning
   - Copying code is fine, but I only learn by changing it, breaking it on purpose, and explaining it in my own words.
 - **What confused me:** What the `!` in DOCTYPE actually does.
 - **Next:** Make the theme remember my choice with localStorage.
+
+## Glossary
+- **DOCTYPE:** first line of an HTML file, tells the browser it's modern HTML
+- **Comment:** `<!-- text -->`, a note the browser ignores
+- **CSS variable:** a named value like `--bg` that lets me change a whole theme in one place
