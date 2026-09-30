@@ -2,7 +2,7 @@
 
 The first spontaneous project, started Wed 30 Sept, 8:40PM.
 
-A bookshelf webpage that helps me read something every day, built while learning to code.
+A bookshelf webpage that helps me read something every day, built while learning to code as a complete beginner with no foundation.
 
 ## Roadmap
 - [x] Create the repo
