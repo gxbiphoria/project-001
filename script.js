@@ -1,3 +1,4 @@
+   console.log("new script is running");
 const button = document.getElementById("theme-toggle");
 
 if (localStorage.getItem("theme") === "dark") {
