@@ -39,14 +39,59 @@ li {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Slider switch */
 #theme-toggle {
+  position: relative;
   display: block;
+  width: 72px;
+  height: 36px;
   margin: 0 auto 24px;
-  padding: 8px 16px;
+  padding: 0;
   border: none;
-  border-radius: 20px;
+  border-radius: 36px;
   cursor: pointer;
-  background: var(--title);
-  color: var(--bg);
-  font-size: 1rem;
+  background: #d9c9b3;
+  transition: background 0.8s ease;
+}
+
+body.dark #theme-toggle {
+  background: #3a3a55;
+}
+
+.knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+}
+
+body.dark .knob {
+  transform: translateX(36px);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  line-height: 1;
+  z-index: 1;
+}
+
+.sun { left: 8px; }
+.moon { right: 8px; }
+
+/* Softer color changes */
+body,
+li {
+  transition: background 0.8s ease, color 0.8s ease;
+}
+
+h1 {
+  transition: color 0.8s ease;
 }
