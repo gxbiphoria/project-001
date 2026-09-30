@@ -4,7 +4,7 @@ The first spontaneous project, started Wed 30 Sept, 8:40PM.
 
 A bookshelf webpage that helps me read something every day, built while learning to code from zero.
 
-**Live site:** [https://gxbiphoria.github.io](https://gxbiphoria.github.io/project-001/)
+**Live site:** [https://gxbiphoria.github.io/project-001/](https://gxbiphoria.github.io/project-001/)
 
 ## Goal
 Read something every day, and learn HTML, CSS and JavaScript by building this project.
