@@ -118,3 +118,32 @@ li {
   font-family: inherit;
   font-size: 0.9rem;
 }
+/* Add a book */
+.add-book {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+#new-title {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--card);
+  color: var(--text);
+  transition: background 0.8s ease, color 0.8s ease;
+}
+
+#add-btn {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: var(--title);
+  color: var(--bg);
+  font-family: inherit;
+  font-size: 1rem;
+}
