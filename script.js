@@ -75,6 +75,39 @@ function showStatus(message) {
   statusMsg.textContent = message;
 }
 
+// ---- Confirm popup ----
+const dialog = document.getElementById("confirm-dialog");
+const dialogText = document.getElementById("confirm-text");
+let pendingAction = null;
+
+function askConfirm(message, onConfirm) {
+  dialogText.textContent = message;
+  pendingAction = onConfirm;
+  dialog.showModal();
+}
+
+document.getElementById("confirm-cancel").addEventListener("click", function () {
+  dialog.close();
+});
+
+document.getElementById("confirm-ok").addEventListener("click", function () {
+  if (pendingAction) {
+    pendingAction();
+  }
+  dialog.close();
+});
+
+dialog.addEventListener("click", function (event) {
+  if (event.target === dialog) {
+    dialog.close();
+  }
+});
+
+dialog.addEventListener("close", function () {
+  pendingAction = null;
+});
+// ------------------------
+
 function render() {
   document.querySelectorAll("ul").forEach(function (list) {
     list.innerHTML = "";
@@ -104,12 +137,12 @@ function render() {
     removeBtn.textContent = "✕";
     removeBtn.setAttribute("aria-label", "Remove " + book.title);
     removeBtn.addEventListener("click", function () {
-      if (confirm('Remove "' + book.title + '"?')) {
+      askConfirm('Remove "' + book.title + '"?', function () {
         books.splice(index, 1);
         saveBooks();
         render();
         showStatus('Removed "' + book.title + '".');
-      }
+      });
     });
 
     actions.appendChild(moveBtn);
