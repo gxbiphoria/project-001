@@ -71,4 +71,28 @@ function render() {
 }
 
 render();
+const input = document.getElementById("new-title");
+const addBtn = document.getElementById("add-btn");
+
+function addBook() {
+  const title = input.value.trim();
+  if (title === "") {
+    return;
+  }
+
+  books.push({ title: title, shelf: "to-read" });
+  saveBooks();
+  render();
+
+  input.value = "";
+  input.focus();
+}
+
+addBtn.addEventListener("click", addBook);
+
+input.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    addBook();
+  }
+});
 refreshButtons();
