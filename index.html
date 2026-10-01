@@ -8,37 +8,42 @@
 </head>
 <body>
   <h1>My Bookshelf</h1>
+
   <button id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
-  <span class="icon sun">𖤓</span>
-  <span class="icon moon">⏾</span>
-  <span class="knob"></span>
-</button>
+    <span class="icon sun">𖤓</span>
+    <span class="icon moon">⏾</span>
+    <span class="knob"></span>
+  </button>
+
   <div class="add-book">
-  <input id="new-title" type="text" placeholder="Add a book or article..." aria-label="Title of the new book">
-  <button id="add-btn">Add</button>
-</div>
-<p id="status" aria-live="polite"></p>
-  <section>
-  <h2>To read</h2>
-  <ul id="to-read"></ul>
-</section>
-
-<section>
-  <h2>Reading</h2>
-  <ul id="reading"></ul>
-</section>
-
-<section>
-  <h2>Completed</h2>
-  <ul id="completed"></ul>
-</section>
-  <script src="script.js"></script>
-  <dialog id="confirm-dialog">
-  <p id="confirm-text"></p>
-  <div class="dialog-buttons">
-    <button id="confirm-cancel">Cancel</button>
-    <button id="confirm-ok">Remove</button>
+    <input id="new-title" type="text" placeholder="Add a book or article..." aria-label="Title of the new book">
+    <button id="add-btn">Add</button>
   </div>
-</dialog>
+  <p id="status" aria-live="polite"></p>
+
+  <section>
+    <h2>To read</h2>
+    <ul id="to-read"></ul>
+  </section>
+
+  <section>
+    <h2>Reading</h2>
+    <ul id="reading"></ul>
+  </section>
+
+  <section>
+    <h2>Completed</h2>
+    <ul id="completed"></ul>
+  </section>
+
+  <dialog id="confirm-dialog">
+    <p id="confirm-text"></p>
+    <div class="dialog-buttons">
+      <button id="confirm-cancel">Cancel</button>
+      <button id="confirm-ok">Remove</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
