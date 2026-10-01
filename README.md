@@ -47,6 +47,12 @@ This project started as a learning exercise and grew into a small personal readi
 
 ## Progress Log
 
+### Thu 1 Oct
+- **What I did:**
+- **What I learned:**
+- **What confused me:**
+- **Next:**
+
 ### Wed 30 Sept
 - **What I did:**
   - Started the project and set up the repo
