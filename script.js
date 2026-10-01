@@ -136,4 +136,12 @@ function addBook() {
   input.focus();
 }
 
-addBtn.addEventListener("c
+addBtn.addEventListener("click", addBook);
+
+input.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    addBook();
+  }
+});
+
+render();
