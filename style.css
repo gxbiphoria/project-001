@@ -147,3 +147,59 @@ li {
   font-family: inherit;
   font-size: 1rem;
 }
+/* Button feedback */
+#add-btn,
+.move-btn,
+.remove-btn {
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+#add-btn:hover,
+.move-btn:hover {
+  opacity: 0.85;
+}
+
+#add-btn:active,
+.move-btn:active,
+.remove-btn:active {
+  transform: scale(0.94);
+}
+
+#add-btn:focus-visible,
+.move-btn:focus-visible,
+.remove-btn:focus-visible,
+#new-title:focus-visible {
+  outline: 2px solid var(--title);
+  outline-offset: 2px;
+}
+
+/* Remove button and message */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remove-btn {
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text);
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.remove-btn:hover {
+  opacity: 1;
+}
+
+#status {
+  min-height: 1.4em;
+  margin: -12px 0 20px;
+  padding-left: 14px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
