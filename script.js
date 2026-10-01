@@ -24,24 +24,51 @@ button.addEventListener("click", function () {
     console.warn("localStorage not available:", e);
   }
 });
-const order = ["to-read", "reading", "completed"];
-const labels = ["Start reading", "Mark as read", "Read again"];
+// ---- My books: add a new line here for each new book ----
+const books = [
+  { title: "Book one", shelf: "to-read" },
+  { title: "Book two", shelf: "to-read" },
+  { title: "Book three", shelf: "reading" },
+];
+// ---------------------------------------------------------
 
-function refreshButtons() {
-  document.querySelectorAll(".move-btn").forEach(function (btn) {
-    const shelfId = btn.parentElement.parentElement.id;
-    btn.textContent = labels[order.indexOf(shelfId)];
+const labels = {
+  "to-read": "Start reading",
+  "reading": "Mark as read",
+  "completed": "Read again",
+};
+
+const nextShelf = {
+  "to-read": "reading",
+  "reading": "completed",
+  "completed": "to-read",
+};
+
+function render() {
+  document.querySelectorAll("ul").forEach(function (list) {
+    list.innerHTML = "";
+  });
+
+  books.forEach(function (book) {
+    const li = document.createElement("li");
+
+    const title = document.createElement("span");
+    title.className = "title";
+    title.textContent = book.title;
+
+    const btn = document.createElement("button");
+    btn.className = "move-btn";
+    btn.textContent = labels[book.shelf];
+    btn.addEventListener("click", function () {
+      book.shelf = nextShelf[book.shelf];
+      render();
+    });
+
+    li.appendChild(title);
+    li.appendChild(btn);
+    document.getElementById(book.shelf).appendChild(li);
   });
 }
 
-document.querySelectorAll(".move-btn").forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    const book = btn.parentElement;
-    const current = order.indexOf(book.parentElement.id);
-    const next = (current + 1) % order.length;
-    document.getElementById(order[next]).appendChild(book);
-    refreshButtons();
-  });
-});
-
+render();
 refreshButtons();
